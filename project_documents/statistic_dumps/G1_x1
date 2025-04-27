@@ -1,0 +1,1022 @@
+sudo ./db_bench --db=/home/jaxie/dir_rocksdb/test.db --benchmarks=fillrandom,stats --num=2000000 --key_size=16 --value_size=4096 --compression_type=zlib --stats_level=5 --stats_per_interval=1 --statistics=1 --disable_wal=true --compression_ratio=0.3 --seed=1745714556555094 --perf_level=3 2>&1
+[sudo] password for jaxie: 
+Initializing RocksDB Options from the specified file
+Initializing RocksDB Options from command-line flags
+Integrated BlobDB: blob cache disabled
+RocksDB:    version 10.3.0
+Date:       Sun Apr 27 16:39:17 2025
+CPU:        8 * Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz
+CPUCache:   8192 KB
+Keys:       16 bytes each (+ 0 bytes user-defined timestamp)
+Values:     4096 bytes each (1229 bytes after compression)
+Entries:    2000000
+Prefix:    0 bytes
+Keys per prefix:    0
+RawSize:    7843.0 MB (estimated)
+FileSize:   2374.3 MB (estimated)
+Write rate: 0 bytes/second
+Read rate: 0 ops/second
+Compression: Zlib
+Compression sampling rate: 0
+Memtablerep: SkipListFactory
+Perf Level: 3
+WARNING: Assertions are enabled; benchmarks unnecessarily slow
+------------------------------------------------
+Initializing RocksDB Options from the specified file
+Initializing RocksDB Options from command-line flags
+Integrated BlobDB: blob cache disabled
+DB path: [/home/jaxie/dir_rocksdb/test.db]
+Dynamic compression ratio (RocksDB est.): 30.509990 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 4 files, logical size 80485196 bytes
+Dynamic compression ratio (RocksDB est.): 30.509990 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 4 files, logical size 80485196 bytes
+Dynamic compression ratio (RocksDB est.): 30.499821 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 5 files, logical size 100567621 bytes
+Dynamic compression ratio (RocksDB est.): 30.499821  
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 5 files, logical size 100567621 bytes
+Dynamic compression ratio (RocksDB est.): 30.492160 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 6 files, logical size 120645304 bytes
+Dynamic compression ratio (RocksDB est.): 30.492160 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 6 files, logical size 120645304 bytes
+Dynamic compression ratio (RocksDB est.): 30.493741 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 7 files, logical size 140759315 bytes
+Dynamic compression ratio (RocksDB est.): 30.493741 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 7 files, logical size 140759315 bytes
+Dynamic compression ratio (RocksDB est.): 30.496120 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 8 files, logical size 160873338 bytes
+Dynamic compression ratio (RocksDB est.): 30.496120  
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 8 files, logical size 160873338 bytes
+Dynamic compression ratio (RocksDB est.): 30.496616 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 9 files, logical size 180990635 bytes
+Dynamic compression ratio (RocksDB est.): 30.496616 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 9 files, logical size 180990635 bytes
+Dynamic compression ratio (RocksDB est.): 30.496923 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 10 files, logical size 201093511 bytes
+Dynamic compression ratio (RocksDB est.): 30.496923 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 10 files, logical size 201093511 bytes
+Dynamic compression ratio (RocksDB est.): 30.501280 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 11 files, logical size 221231202 bytes
+Dynamic compression ratio (RocksDB est.): 30.501280  
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 11 files, logical size 221231202 bytes
+Dynamic compression ratio (RocksDB est.): 30.506107 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 12 files, logical size 241367043 bytes
+Dynamic compression ratio (RocksDB est.): 30.506107 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 12 files, logical size 241367043 bytes
+Dynamic compression ratio (RocksDB est.): 30.506617 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 13 files, logical size 261469723 bytes
+Dynamic compression ratio (RocksDB est.): 30.506617 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 13 files, logical size 261469723 bytes
+Dynamic compression ratio (RocksDB est.): 30.506189 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+Dynamic compression ratio (RocksDB est.): 30.415096  
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 7 files, logical size 140977998 bytes
+Dynamic compression ratio (RocksDB est.): 30.415096 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 7 files, logical size 140977998 bytes
+Dynamic compression ratio (RocksDB est.): 30.419103 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 8 files, logical size 161061313 bytes
+Dynamic compression ratio (RocksDB est.): 30.419103 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 8 files, logical size 161061313 bytes
+Dynamic compression ratio (RocksDB est.): 30.424152 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 9 files, logical size 181195307 bytes
+Dynamic compression ratio (RocksDB est.): 30.424152  
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 9 files, logical size 181195307 bytes
+Dynamic compression ratio (RocksDB est.): 30.429984 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 10 files, logical size 201351737 bytes
+Dynamic compression ratio (RocksDB est.): 30.429984 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 10 files, logical size 201351737 bytes
+Dynamic compression ratio (RocksDB est.): 30.433978 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 11 files, logical size 221471395 bytes
+Dynamic compression ratio (RocksDB est.): 30.433978 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 11 files, logical size 221471395 bytes
+Dynamic compression ratio (RocksDB est.): 30.436648 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 12 files, logical size 241581746 bytes
+Dynamic compression ratio (RocksDB est.): 30.436648 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 12 files, logical size 241581746 bytes
+Dynamic compression ratio (RocksDB est.): 30.440085 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 13 files, logical size 261703907 bytes
+Dynamic compression ratio (RocksDB est.): 30.440085  
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 13 files, logical size 261703907 bytes
+Dynamic compression ratio (RocksDB est.): 30.444463 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+Dynamic compression ratio (RocksDB est.): 30.391141  
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 8 files, logical size 161030057 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 503598848, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 503598848 logical bytes, effective max 883268768 bytes, dynamic ratio=30.39
+Dynamic compression ratio (RocksDB est.): 30.391141 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 8 files, logical size 161030057 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 503598848, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 503598848 logical bytes, effective max 883268768 bytes, dynamic ratio=30.39
+Dynamic compression ratio (RocksDB est.): 30.395518 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 9 files, logical size 181170028 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 503598848, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 503598848 logical bytes, effective max 883141563 bytes, dynamic ratio=30.40
+Dynamic compression ratio (RocksDB est.): 30.395518 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 9 files, logical size 181170028 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 503598848, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 503598848 logical bytes, effective max 883141563 bytes, dynamic ratio=30.40
+Dynamic compression ratio (RocksDB est.): 30.398517 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 10 files, logical size 201273786 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 503598848, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 503598848 logical bytes, effective max 883054440 bytes, dynamic ratio=30.40
+Dynamic compression ratio (RocksDB est.): 30.398517 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 10 files, logical size 201273786 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 503598848, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 503598848 logical bytes, effective max 883054440 bytes, dynamic ratio=30.40
+Dynamic compression ratio (RocksDB est.): 30.401703 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 11 files, logical size 221390965 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 503598848, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 503598848 logical bytes, effective max 882961904 bytes, dynamic ratio=30.40
+Dynamic compression ratio (RocksDB est.): 30.401703 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 11 files, logical size 221390965 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 503598848, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 503598848 logical bytes, effective max 882961904 bytes, dynamic ratio=30.40
+Dynamic compression ratio (RocksDB est.): 30.405945 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 12 files, logical size 241536976 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 503598848, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 503598848 logical bytes, effective max 882838720 bytes, dynamic ratio=30.41
+Dynamic compression ratio (RocksDB est.): 30.405945 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 12 files, logical size 241536976 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 503598848, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 503598848 logical bytes, effective max 882838720 bytes, dynamic ratio=30.41
+Dynamic compression ratio (RocksDB est.): 30.409599 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 13 files, logical size 261678790 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 503598848, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 503598848 logical bytes, effective max 882732643 bytes, dynamic ratio=30.41
+Dynamic compression ratio (RocksDB est.): 30.409599 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 13 files, logical size 261678790 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 503598848, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 503598848 logical bytes, effective max 882732643 bytes, dynamic ratio=30.41
+Dynamic compression ratio (RocksDB est.): 30.411928 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+Dynamic compression ratio (RocksDB est.): 30.378796  
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 715872634, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 715872634 logical bytes, effective max 883627693 bytes, dynamic ratio=30.38
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 8 files, logical size 161077908 bytes
+Dynamic compression ratio (RocksDB est.): 30.381505 
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 715872634, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 715872634 logical bytes, effective max 883548903 bytes, dynamic ratio=30.38
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 9 files, logical size 181182346 bytes
+Dynamic compression ratio (RocksDB est.): 30.381505 
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 715872634, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 715872634 logical bytes, effective max 883548903 bytes, dynamic ratio=30.38
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 9 files, logical size 181182346 bytes
+Dynamic compression ratio (RocksDB est.): 30.385341 
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 715872634, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 715872634 logical bytes, effective max 883437368 bytes, dynamic ratio=30.39
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 10 files, logical size 201331876 bytes
+Dynamic compression ratio (RocksDB est.): 30.385341 
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 715872634, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 715872634 logical bytes, effective max 883437368 bytes, dynamic ratio=30.39
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 10 files, logical size 201331876 bytes
+Dynamic compression ratio (RocksDB est.): 30.389018 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 11 files, logical size 221484086 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 715872634, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 715872634 logical bytes, effective max 883330463 bytes, dynamic ratio=30.39
+Dynamic compression ratio (RocksDB est.): 30.389018 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 11 files, logical size 221484086 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 715872634, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 715872634 logical bytes, effective max 883330463 bytes, dynamic ratio=30.39
+Dynamic compression ratio (RocksDB est.): 30.391373 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 12 files, logical size 241598223 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 715872634, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 715872634 logical bytes, effective max 883262023 bytes, dynamic ratio=30.39
+Dynamic compression ratio (RocksDB est.): 30.391373 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 12 files, logical size 241598223 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 715872634, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 715872634 logical bytes, effective max 883262023 bytes, dynamic ratio=30.39
+Dynamic compression ratio (RocksDB est.): 30.393634 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 13 files, logical size 261709935 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 715872634, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 715872634 logical bytes, effective max 883196328 bytes, dynamic ratio=30.39
+Dynamic compression ratio (RocksDB est.): 30.393634  
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 13 files, logical size 261709935 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 715872634, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 715872634 logical bytes, effective max 883196328 bytes, dynamic ratio=30.39
+Dynamic compression ratio (RocksDB est.): 30.396840 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+Dynamic compression ratio (RocksDB est.): 30.370837   
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 905682918, base_max_bytes = 268435456 
+Dynamic compression ratio (RocksDB est.): 30.370837 
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 635600877, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 635600877 logical bytes, effective max 883859273 bytes, dynamic ratio=30.37
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 8 files, logical size 161030726 bytes
+Dynamic compression ratio (RocksDB est.): 30.374314 
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 635600877, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 635600877 logical bytes, effective max 883758075 bytes, dynamic ratio=30.37
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 9 files, logical size 181174370 bytes
+Dynamic compression ratio (RocksDB est.): 30.374314 
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 635600877, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 635600877 logical bytes, effective max 883758075 bytes, dynamic ratio=30.37
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 9 files, logical size 181174370 bytes
+Dynamic compression ratio (RocksDB est.): 30.376837 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 10 files, logical size 201276541 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 635600877, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 635600877 logical bytes, effective max 883684676 bytes, dynamic ratio=30.38
+Dynamic compression ratio (RocksDB est.): 30.376837 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 10 files, logical size 201276541 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 635600877, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 635600877 logical bytes, effective max 883684676 bytes, dynamic ratio=30.38
+Dynamic compression ratio (RocksDB est.): 30.379042 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 11 files, logical size 221375255 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 635600877, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 635600877 logical bytes, effective max 883620530 bytes, dynamic ratio=30.38
+Dynamic compression ratio (RocksDB est.): 30.379042   
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 11 files, logical size 221375255 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 635600877, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 635600877 logical bytes, effective max 883620530 bytes, dynamic ratio=30.38
+Dynamic compression ratio (RocksDB est.): 30.381853 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 12 files, logical size 241524762 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 635600877, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 635600877 logical bytes, effective max 883538793 bytes, dynamic ratio=30.38
+Dynamic compression ratio (RocksDB est.): 30.381853 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 12 files, logical size 241524762 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 635600877, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 635600877 logical bytes, effective max 883538793 bytes, dynamic ratio=30.38
+Dynamic compression ratio (RocksDB est.): 30.384917 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 13 files, logical size 261682723 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 635600877, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 635600877 logical bytes, effective max 883449690 bytes, dynamic ratio=30.38
+Dynamic compression ratio (RocksDB est.): 30.384917 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 13 files, logical size 261682723 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 635600877, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 635600877 logical bytes, effective max 883449690 bytes, dynamic ratio=30.38
+Dynamic compression ratio (RocksDB est.): 30.387177 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+Dynamic compression ratio (RocksDB est.): 30.402931   
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 835751359, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 835751359 logical bytes, effective max 882926233 bytes, dynamic ratio=30.40
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 8 files, logical size 161042007 bytes
+Dynamic compression ratio (RocksDB est.): 30.404445 
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 835751359, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 835751359 logical bytes, effective max 882882288 bytes, dynamic ratio=30.40
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 9 files, logical size 181145169 bytes
+Dynamic compression ratio (RocksDB est.): 30.404445   
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 835751359, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 835751359 logical bytes, effective max 882882288 bytes, dynamic ratio=30.40
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 9 files, logical size 181145169 bytes
+Dynamic compression ratio (RocksDB est.): 30.406302 
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 835751359, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 835751359 logical bytes, effective max 882828364 bytes, dynamic ratio=30.41
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 10 files, logical size 201262603 bytes
+Dynamic compression ratio (RocksDB est.): 30.406302 
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 835751359, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 835751359 logical bytes, effective max 882828364 bytes, dynamic ratio=30.41
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 10 files, logical size 201262603 bytes
+Dynamic compression ratio (RocksDB est.): 30.408619 
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 835751359, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 835751359 logical bytes, effective max 882761087 bytes, dynamic ratio=30.41
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 11 files, logical size 221395052 bytes
+Dynamic compression ratio (RocksDB est.): 30.408619 
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 835751359, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 835751359 logical bytes, effective max 882761087 bytes, dynamic ratio=30.41
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 11 files, logical size 221395052 bytes
+Dynamic compression ratio (RocksDB est.): 30.410467 
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 835751359, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 835751359 logical bytes, effective max 882707450 bytes, dynamic ratio=30.41
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 12 files, logical size 241529798 bytes
+Dynamic compression ratio (RocksDB est.): 30.410467 
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 835751359, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 835751359 logical bytes, effective max 882707450 bytes, dynamic ratio=30.41
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 12 files, logical size 241529798 bytes
+Dynamic compression ratio (RocksDB est.): 30.411789 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 13 files, logical size 261644585 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 835751359, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 835751359 logical bytes, effective max 882669083 bytes, dynamic ratio=30.41
+Dynamic compression ratio (RocksDB est.): 30.411789 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 13 files, logical size 261644585 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 835751359, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 835751359 logical bytes, effective max 882669083 bytes, dynamic ratio=30.41
+Dynamic compression ratio (RocksDB est.): 30.413368 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+Dynamic compression ratio (RocksDB est.): 30.422265   
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 1014532116, base_max_bytes = 268435456 
+Dynamic compression ratio (RocksDB est.): 30.422265 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 8 files, logical size 161002931 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 474389687, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 474389687 logical bytes, effective max 882365116 bytes, dynamic ratio=30.42
+Dynamic compression ratio (RocksDB est.): 30.424152 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 9 files, logical size 181158236 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 474389687, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 474389687 logical bytes, effective max 882310384 bytes, dynamic ratio=30.42
+Dynamic compression ratio (RocksDB est.): 30.424152 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 9 files, logical size 181158236 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 474389687, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 474389687 logical bytes, effective max 882310384 bytes, dynamic ratio=30.42
+Dynamic compression ratio (RocksDB est.): 30.425816 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 10 files, logical size 201305098 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 474389687, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 474389687 logical bytes, effective max 882262149 bytes, dynamic ratio=30.43
+Dynamic compression ratio (RocksDB est.): 30.425816 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 10 files, logical size 201305098 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 474389687, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 474389687 logical bytes, effective max 882262149 bytes, dynamic ratio=30.43
+Dynamic compression ratio (RocksDB est.): 30.426815 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 11 files, logical size 221422520 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 474389687, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 474389687 logical bytes, effective max 882233185 bytes, dynamic ratio=30.43
+Dynamic compression ratio (RocksDB est.): 30.426815 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 11 files, logical size 221422520 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 474389687, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 474389687 logical bytes, effective max 882233185 bytes, dynamic ratio=30.43
+Dynamic compression ratio (RocksDB est.): 30.427883 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 12 files, logical size 241524666 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 474389687, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 474389687 logical bytes, effective max 882202220 bytes, dynamic ratio=30.43
+Dynamic compression ratio (RocksDB est.): 30.427883 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 12 files, logical size 241524666 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 474389687, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 474389687 logical bytes, effective max 882202220 bytes, dynamic ratio=30.43
+Dynamic compression ratio (RocksDB est.): 30.429587 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 13 files, logical size 261676879 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 474389687, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 474389687 logical bytes, effective max 882152795 bytes, dynamic ratio=30.43
+Dynamic compression ratio (RocksDB est.): 30.429587 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 13 files, logical size 261676879 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 474389687, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 474389687 logical bytes, effective max 882152795 bytes, dynamic ratio=30.43
+Dynamic compression ratio (RocksDB est.): 30.431147 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+Dynamic compression ratio (RocksDB est.): 30.435471   
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 691295466, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 691295466 logical bytes, effective max 881982264 bytes, dynamic ratio=30.44
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 7 files, logical size 140847372 bytes
+Dynamic compression ratio (RocksDB est.): 30.436959 
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 691295466, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 691295466 logical bytes, effective max 881939150 bytes, dynamic ratio=30.44
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 8 files, logical size 161011768 bytes
+Dynamic compression ratio (RocksDB est.): 30.436959 
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 691295466, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 691295466 logical bytes, effective max 881939150 bytes, dynamic ratio=30.44
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 8 files, logical size 161011768 bytes
+Dynamic compression ratio (RocksDB est.): 30.437752 
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 691295466, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 691295466 logical bytes, effective max 881916165 bytes, dynamic ratio=30.44
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 9 files, logical size 181134713 bytes
+Dynamic compression ratio (RocksDB est.): 30.437752 
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 691295466, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 691295466 logical bytes, effective max 881916165 bytes, dynamic ratio=30.44
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 9 files, logical size 181134713 bytes
+Dynamic compression ratio (RocksDB est.): 30.438501 
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 691295466, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 691295466 logical bytes, effective max 881894454 bytes, dynamic ratio=30.44
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 10 files, logical size 201247467 bytes
+Dynamic compression ratio (RocksDB est.): 30.438501 
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 691295466, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 691295466 logical bytes, effective max 881894454 bytes, dynamic ratio=30.44
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 10 files, logical size 201247467 bytes
+Dynamic compression ratio (RocksDB est.): 30.439828 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 11 files, logical size 221401389 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 691295466, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 691295466 logical bytes, effective max 881856030 bytes, dynamic ratio=30.44
+Dynamic compression ratio (RocksDB est.): 30.439828 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 11 files, logical size 221401389 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 691295466, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 691295466 logical bytes, effective max 881856030 bytes, dynamic ratio=30.44
+Dynamic compression ratio (RocksDB est.): 30.441208 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 12 files, logical size 241561431 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 691295466, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 691295466 logical bytes, effective max 881816033 bytes, dynamic ratio=30.44
+Dynamic compression ratio (RocksDB est.): 30.441208 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 12 files, logical size 241561431 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 691295466, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 691295466 logical bytes, effective max 881816033 bytes, dynamic ratio=30.44
+Dynamic compression ratio (RocksDB est.): 30.441955 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 13 files, logical size 261677791 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 691295466, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 691295466 logical bytes, effective max 881794406 bytes, dynamic ratio=30.44
+Dynamic compression ratio (RocksDB est.): 30.441955   
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 13 files, logical size 261677791 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 691295466, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 691295466 logical bytes, effective max 881794406 bytes, dynamic ratio=30.44
+Dynamic compression ratio (RocksDB est.): 30.442616 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+Dynamic compression ratio (RocksDB est.): 30.444863   
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 885310982, base_max_bytes = 268435456 
+Dynamic compression ratio (RocksDB est.): 30.444863 
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 494173181, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 494173181 logical bytes, effective max 881710192 bytes, dynamic ratio=30.44
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 7 files, logical size 140937954 bytes
+Dynamic compression ratio (RocksDB est.): 30.445467 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 8 files, logical size 161046582 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 494173181, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 494173181 logical bytes, effective max 881692684 bytes, dynamic ratio=30.45
+Dynamic compression ratio (RocksDB est.): 30.445467 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 8 files, logical size 161046582 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 494173181, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 494173181 logical bytes, effective max 881692684 bytes, dynamic ratio=30.45
+Dynamic compression ratio (RocksDB est.): 30.446468 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 9 files, logical size 181180433 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 494173181, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 494173181 logical bytes, effective max 881663701 bytes, dynamic ratio=30.45
+Dynamic compression ratio (RocksDB est.): 30.446468 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 9 files, logical size 181180433 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 494173181, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 494173181 logical bytes, effective max 881663701 bytes, dynamic ratio=30.45
+Dynamic compression ratio (RocksDB est.): 30.447662 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 10 files, logical size 201330179 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 494173181, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 494173181 logical bytes, effective max 881629112 bytes, dynamic ratio=30.45
+Dynamic compression ratio (RocksDB est.): 30.447662 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 10 files, logical size 201330179 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 494173181, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 494173181 logical bytes, effective max 881629112 bytes, dynamic ratio=30.45
+Dynamic compression ratio (RocksDB est.): 30.448417 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 11 files, logical size 221446263 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 494173181, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 494173181 logical bytes, effective max 881607270 bytes, dynamic ratio=30.45
+fillrandom   :     180.787 micros/op 5531 ops/sec 361.575 seconds 2000000 operations;   21.7 MB/s PERF_CONTEXT:
+user_key_comparison_count = 182168187, block_cache_hit_count = 0, block_read_count = 0, block_read_byte = 0, block_read_time = 0, block_read_cpu_time = 0, block_cache_index_hit_count = 0, block_cache_standalone_handle_count = 0, block_cache_real_handle_count = 0, index_block_read_count = 0, block_cache_filter_hit_count = 0, filter_block_read_count = 0, compression_dict_block_read_count = 0, block_cache_index_read_byte = 0, block_cache_filter_read_byte = 0, block_cache_compression_dict_read_byte = 0, block_cache_read_byte = 0, secondary_cache_hit_count = 0, compressed_sec_cache_insert_real_count = 0, compressed_sec_cache_insert_dummy_count = 0, compressed_sec_cache_uncompressed_bytes = 0, compressed_sec_cache_compressed_bytes = 0, block_checksum_time = 0, block_decompress_time = 0, get_read_bytes = 0, multiget_read_bytes = 0, iter_read_bytes = 0, blob_cache_hit_count = 0, blob_read_count = 0, blob_read_byte = 0, blob_read_time = 0, blob_checksum_time = 0, blob_decompress_time = 0, internal_key_skipped_count = 0, internal_delete_skipped_count = 0, internal_recent_skipped_count = 0, internal_merge_count = 0, internal_merge_point_lookup_count = 0, internal_range_del_reseek_count = 0, get_snapshot_time = 0, get_from_memtable_time = 0, get_from_memtable_count = 0, get_post_process_time = 0, get_from_output_files_time = 0, seek_on_memtable_time = 0, seek_on_memtable_count = 0, next_on_memtable_count = 0, prev_on_memtable_count = 0, seek_child_seek_time = 0, seek_child_seek_count = 0, seek_min_heap_time = 0, seek_max_heap_time = 0, seek_internal_seek_time = 0, find_next_user_entry_time = 0, write_wal_time = 0, write_memtable_time = 7394644112, write_delay_time = 350960516561, write_scheduling_flushes_compactions_time = 0, write_pre_and_post_process_time = 0, write_thread_wait_nanos = 0, db_mutex_lock_nanos = 0, db_condition_wait_nanos = 0, merge_operator_time_nanos = 0, read_index_block_nanos = 0, read_filter_block_nanos = 0, new_table_block_iter_nanos = 0, new_table_iterator_nanos = 0, block_seek_nanos = 0, find_table_nanos = 0, bloom_memtable_hit_count = 0, bloom_memtable_miss_count = 0, bloom_sst_hit_count = 0, bloom_sst_miss_count = 0, key_lock_wait_time = 0, key_lock_wait_count = 0, env_new_sequential_file_nanos = 0, env_new_random_access_file_nanos = 0, env_new_writable_file_nanos = 0, env_reuse_writable_file_nanos = 0, env_new_random_rw_file_nanos = 0, env_new_directory_nanos = 0, env_file_exists_nanos = 0, env_get_children_nanos = 0, env_get_children_file_attributes_nanos = 0, env_delete_file_nanos = 0, env_create_dir_nanos = 0, env_create_dir_if_missing_nanos = 0, env_delete_dir_nanos = 0, env_get_file_size_nanos = 0, env_get_file_modification_time_nanos = 0, env_rename_file_nanos = 0, env_link_file_nanos = 0, env_lock_file_nanos = 0, env_unlock_file_nanos = 0, env_new_logger_nanos = 0, get_cpu_nanos = 0, iter_next_cpu_nanos = 0, iter_prev_cpu_nanos = 0, iter_seek_cpu_nanos = 0, iter_next_count = 0, iter_prev_count = 0, iter_seek_count = 0, encrypt_data_nanos = 0, decrypt_data_nanos = 0, number_async_seek = 0, file_ingestion_nanos = 0, file_ingestion_blocking_live_writes_nanos = 0, bloom_filter_useful = bloom_filter_full_positive = bloom_filter_full_true_positive = user_key_return_count = get_from_table_nanos = block_cache_hit_count = block_cache_miss_count =
+
+
+** Compaction Stats [default] **
+Level    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop Rblob(GB) Wblob(GB)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  L0     11/0   211.19 MB   2.8      0.0     0.0      0.0       2.3      2.3       0.0   1.0      0.0     23.0    102.45             84.93       123    0.833   1976K      0       0.0       0.0
+  L1      8/0   471.28 MB   1.8      5.9     2.1      3.8       5.4      1.6       0.0   2.6     19.7     18.0    308.50            273.74         8   38.562   5085K   440K       0.0       0.0
+  L2     11/0    1.12 GB   0.4      0.0     0.0      0.0       0.0      0.0       1.1   0.0      0.0      0.0      0.00              0.00         0    0.000       0      0       0.0       0.0
+ Sum     30/0    1.79 GB   0.0      5.9     2.1      3.8       7.7      3.9       1.1   3.3     14.8     19.2    410.94            358.67       131    3.137   7061K   440K       0.0       0.0
+ Int      0/0    0.00 KB   0.0      5.9     2.1      3.8       7.7      3.8       1.1   3.4     14.9     19.2    408.19            356.59       128    3.189   7013K   440K       0.0       0.0
+
+** Compaction Stats [default] **
+Priority    Files   Size     Score Read(GB)  Rn(GB) Rnp1(GB) Write(GB) Wnew(GB) Moved(GB) W-Amp Rd(MB/s) Wr(MB/s) Comp(sec) CompMergeCPU(sec) Comp(cnt) Avg(sec) KeyIn KeyDrop Rblob(GB) Wblob(GB)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Low      0/0    0.00 KB   0.0      5.9     2.1      3.8       5.4      1.6       0.0   0.0     19.7     18.0    308.50            273.74         8   38.562   5085K   440K       0.0       0.0
+High      0/0    0.00 KB   0.0      0.0     0.0      0.0       2.3      2.3       0.0   0.0      0.0     23.0    102.45             84.93       123    0.833   1976K      0       0.0       0.0
+
+Blob file count: 0, total size: 0.0 GB, garbage size: 0.0 GB, space amp: 0.0
+
+Uptime(secs): 361.6 total, 358.6 interval
+Flush(GB): cumulative 2.306, interval 2.249
+AddFile(GB): cumulative 0.000, interval 0.000
+AddFile(Total Files): cumulative 0, interval 0
+AddFile(L0 Files): cumulative 0, interval 0
+AddFile(Keys): cumulative 0, interval 0
+Cumulative compaction: 7.72 GB write, 21.87 MB/s write, 5.94 GB read, 16.82 MB/s read, 410.9 seconds
+Interval compaction: 7.67 GB write, 21.90 MB/s write, 5.94 GB read, 16.96 MB/s read, 408.2 seconds
+Estimated pending compaction bytes: 1913523630
+Write Stall (count): cf-l0-file-count-limit-delays-with-ongoing-compaction: 26, cf-l0-file-count-limit-stops-with-ongoing-compaction: 0, l0-file-count-limit-delays: 26, l0-file-count-limit-stops: 0, memtable-limit-delays: 0, memtable-limit-stops: 113, pending-compaction-bytes-delays: 0, pending-compaction-bytes-stops: 0, total-delays: 26, total-stops: 113
+interval: 135 total count
+Block cache LRUCache@0x5dce2400ed90#704366 capacity: 32.00 MB seed: 1476775766 usage: 0.09 KB table_size: 1024 occupancy: 1 collections: 1 last_copies: 1 last_secs: 0.000284 secs_since: 361
+Block cache entry stats(count,size,portion): Misc(1,0.00 KB,0%)
+
+** File Read Latency Histogram By Level [default] **
+** Level 0 read latency histogram (micros):
+Count: 1792901 Average: 2.2709  StdDev: 59.19
+Min: 1  Median: 1.4100  Max: 57735
+Percentiles: P50: 1.41 P75: 1.79 P99: 3.84 P99.9: 94.45 P99.99: 314.24
+------------------------------------------------------
+[       0,       1 ]   418942  23.367%  23.367% #####
+(       1,       2 ]  1164689  64.961%  88.328% #############
+(       2,       3 ]   167711   9.354%  97.682% ##
+(       3,       4 ]    28025   1.563%  99.245% 
+(       4,       6 ]     6526   0.364%  99.609% 
+(       6,      10 ]     2888   0.161%  99.770% 
+(      10,      15 ]      824   0.046%  99.816% 
+(      15,      22 ]      250   0.014%  99.830% 
+(      22,      34 ]      181   0.010%  99.840% 
+(      34,      51 ]      235   0.013%  99.853% 
+(      51,      76 ]      582   0.032%  99.886% 
+(      76,     110 ]      470   0.026%  99.912% 
+(     110,     170 ]      888   0.050%  99.962% 
+(     170,     250 ]      401   0.022%  99.984% 
+(     250,     380 ]      222   0.012%  99.996% 
+(     380,     580 ]        2   0.000%  99.996% 
+(     580,     870 ]        4   0.000%  99.997% 
+(     870,    1300 ]        9   0.001%  99.997% 
+(    1300,    1900 ]        8   0.000%  99.998% 
+(    1900,    2900 ]       28   0.002%  99.999% 
+(    2900,    4400 ]       12   0.001% 100.000% 
+(    9900,   14000 ]        1   0.000% 100.000% 
+(   14000,   22000 ]        1   0.000% 100.000% 
+(   33000,   50000 ]        1   0.000% 100.000% 
+(   50000,   75000 ]        1   0.000% 100.000% 
+
+** Level 1 read latency histogram (micros):
+Count: 3292944 Average: 1.7360  StdDev: 0.91
+Min: 1  Median: 1.2671  Max: 336
+Percentiles: P50: 1.27 P75: 1.67 P99: 2.92 P99.9: 8.13 P99.99: 22.51
+------------------------------------------------------
+[       0,       1 ]  1106809  33.612%  33.612% #######
+(       1,       2 ]  2020659  61.363%  94.975% ############
+(       2,       3 ]   143425   4.356%  99.330% #
+(       3,       4 ]    11414   0.347%  99.677% 
+(       4,       6 ]     5220   0.159%  99.835% 
+(       6,      10 ]     3988   0.121%  99.957% 
+(      10,      15 ]      878   0.027%  99.983% 
+(      15,      22 ]      216   0.007%  99.990% 
+(      22,      34 ]      133   0.004%  99.994% 
+(      34,      51 ]       73   0.002%  99.996% 
+(      51,      76 ]       81   0.002%  99.999% 
+(      76,     110 ]       22   0.001%  99.999% 
+(     110,     170 ]       22   0.001% 100.000% 
+(     170,     250 ]        3   0.000% 100.000% 
+(     250,     380 ]        1   0.000% 100.000% 
+
+
+** DB Stats **
+Uptime(secs): 361.6 total, 358.6 interval
+Cumulative writes: 0 writes, 2000K keys, 0 commit groups, 0.0 writes per commit group, ingest: 7.69 GB, 21.77 MB/s
+Cumulative WAL: 0 writes, 0 syncs, 0.00 writes per sync, written: 0.00 GB, 0.00 MB/s
+Cumulative stall: 00:05:50.780 H:M:S, 97.0 percent
+Interval writes: 0 writes, 1919K keys, 0 commit groups, 0.0 writes per commit group, ingest: 7557.27 MB, 21.08 MB/s
+Interval WAL: 0 writes, 0 syncs, 0.00 writes per sync, written: 0.00 GB, 0.00 MB/s
+Interval stall: 00:05:48.282 H:M:S, 97.1 percent
+Write Stall (count): write-buffer-manager-limit-stops: 0
+
+STATISTICS:
+rocksdb.block.cache.miss COUNT : 5085061
+rocksdb.block.cache.hit COUNT : 0
+rocksdb.block.cache.add COUNT : 0
+rocksdb.block.cache.add.failures COUNT : 0
+rocksdb.block.cache.index.miss COUNT : 0
+rocksdb.block.cache.index.hit COUNT : 0
+rocksdb.block.cache.index.add COUNT : 0
+rocksdb.block.cache.index.bytes.insert COUNT : 0
+rocksdb.block.cache.filter.miss COUNT : 0
+rocksdb.block.cache.filter.hit COUNT : 0
+rocksdb.block.cache.filter.add COUNT : 0
+rocksdb.block.cache.filter.bytes.insert COUNT : 0
+rocksdb.block.cache.data.miss COUNT : 5085061
+rocksdb.block.cache.data.hit COUNT : 0
+rocksdb.block.cache.data.add COUNT : 0
+rocksdb.block.cache.data.bytes.insert COUNT : 0
+rocksdb.block.cache.bytes.read COUNT : 0
+rocksdb.block.cache.bytes.write COUNT : 0
+rocksdb.block.cache.compression.dict.miss COUNT : 0
+rocksdb.block.cache.compression.dict.hit COUNT : 0
+rocksdb.block.cache.compression.dict.add COUNT : 0
+rocksdb.block.cache.compression.dict.bytes.insert COUNT : 0
+rocksdb.block.cache.add.redundant COUNT : 0
+rocksdb.block.cache.index.add.redundant COUNT : 0
+rocksdb.block.cache.filter.add.redundant COUNT : 0
+rocksdb.block.cache.data.add.redundant COUNT : 0
+rocksdb.block.cache.compression.dict.add.redundant COUNT : 0
+rocksdb.secondary.cache.hits COUNT : 0
+rocksdb.secondary.cache.filter.hits COUNT : 0
+rocksdb.secondary.cache.index.hits COUNT : 0
+rocksdb.secondary.cache.data.hits COUNT : 0
+rocksdb.compressed.secondary.cache.dummy.hits COUNT : 0
+rocksdb.compressed.secondary.cache.hits COUNT : 0
+rocksdb.compressed.secondary.cache.promotions COUNT : 0
+rocksdb.compressed.secondary.cache.promotion.skips COUNT : 0
+rocksdb.bloom.filter.useful COUNT : 0
+rocksdb.bloom.filter.full.positive COUNT : 0
+rocksdb.bloom.filter.full.true.positive COUNT : 0
+rocksdb.bloom.filter.prefix.checked COUNT : 0
+rocksdb.bloom.filter.prefix.useful COUNT : 0
+rocksdb.bloom.filter.prefix.true.positive COUNT : 0
+rocksdb.persistent.cache.hit COUNT : 0
+rocksdb.persistent.cache.miss COUNT : 0
+rocksdb.sim.block.cache.hit COUNT : 0
+rocksdb.sim.block.cache.miss COUNT : 0
+rocksdb.memtable.hit COUNT : 0
+rocksdb.memtable.miss COUNT : 0
+rocksdb.l0.hit COUNT : 0
+rocksdb.l1.hit COUNT : 0
+rocksdb.l2andup.hit COUNT : 0
+rocksdb.compaction.key.drop.new COUNT : 440334
+rocksdb.compaction.key.drop.obsolete COUNT : 0
+rocksdb.compaction.key.drop.range_del COUNT : 0
+rocksdb.compaction.key.drop.user COUNT : 0
+rocksdb.compaction.range_del.drop.obsolete COUNT : 0
+rocksdb.compaction.optimized.del.drop.obsolete COUNT : 0
+rocksdb.compaction.cancelled COUNT : 0
+rocksdb.number.keys.written COUNT : 2000000
+rocksdb.number.keys.read COUNT : 0
+rocksdb.number.keys.updated COUNT : 0
+rocksdb.bytes.written COUNT : 8256000000
+rocksdb.bytes.read COUNT : 0
+rocksdb.number.db.seek COUNT : 0
+rocksdb.number.db.next COUNT : 0
+rocksdb.number.db.prev COUNT : 0
+rocksdb.number.db.seek.found COUNT : 0
+rocksdb.number.db.next.found COUNT : 0
+rocksdb.number.db.prev.found COUNT : 0
+rocksdb.db.iter.bytes.read COUNT : 0
+rocksdb.number.iter.skip COUNT : 0
+rocksdb.number.reseeks.iteration COUNT : 0
+rocksdb.num.iterator.created COUNT : 0
+rocksdb.num.iterator.deleted COUNT : 0
+rocksdb.no.file.opens COUNT : 196
+rocksdb.no.file.errors COUNT : 0
+rocksdb.stall.micros COUNT : 350779576
+rocksdb.db.mutex.wait.micros COUNT : 85064658230
+rocksdb.number.multiget.get COUNT : 0
+rocksdb.number.multiget.keys.read COUNT : 0
+rocksdb.number.multiget.bytes.read COUNT : 0
+rocksdb.number.multiget.keys.found COUNT : 0
+rocksdb.number.merge.failures COUNT : 0
+rocksdb.getupdatessince.calls COUNT : 0
+rocksdb.wal.synced COUNT : 0
+rocksdb.wal.bytes COUNT : 0
+rocksdb.write.self COUNT : 0
+rocksdb.write.other COUNT : 0
+rocksdb.write.wal COUNT : 0
+rocksdb.compact.read.bytes COUNT : 6372032829
+rocksdb.compact.write.bytes COUNT : 5817959811
+rocksdb.flush.write.bytes COUNT : 2475749912
+rocksdb.compact.read.marked.bytes COUNT : 0
+rocksdb.compact.read.periodic.bytes COUNT : 0
+rocksdb.compact.read.ttl.bytes COUNT : 0
+rocksdb.compact.write.marked.bytes COUNT : 0
+rocksdb.compact.write.periodic.bytes COUNT : 0
+rocksdb.compact.write.ttl.bytes COUNT : 0
+rocksdb.number.direct.load.table.properties COUNT : 0
+rocksdb.number.superversion_acquires COUNT : 0
+rocksdb.number.superversion_releases COUNT : 0
+rocksdb.number.superversion_cleanups COUNT : 0
+rocksdb.number.block.compressed COUNT : 6614024
+rocksdb.number.block.decompressed COUNT : 5085257
+rocksdb.bytes.compressed.from COUNT : 27459363274
+rocksdb.bytes.compressed.to COUNT : 8261223696
+rocksdb.bytes.compression_bypassed COUNT : 0
+rocksdb.bytes.compression.rejected COUNT : 0
+rocksdb.number.block_compression_bypassed COUNT : 0
+rocksdb.number.block_compression_rejected COUNT : 0
+rocksdb.bytes.decompressed.from COUNT : 6362819397
+rocksdb.bytes.decompressed.to COUNT : 21142498030
+rocksdb.merge.operation.time.nanos COUNT : 0
+rocksdb.filter.operation.time.nanos COUNT : 0
+rocksdb.compaction.total.time.cpu_micros COUNT : 273741172
+rocksdb.row.cache.hit COUNT : 0
+rocksdb.row.cache.miss COUNT : 0
+rocksdb.read.amp.estimate.useful.bytes COUNT : 0
+rocksdb.read.amp.total.read.bytes COUNT : 0
+rocksdb.number.rate_limiter.drains COUNT : 0
+rocksdb.blobdb.num.put COUNT : 0
+rocksdb.blobdb.num.write COUNT : 0
+rocksdb.blobdb.num.get COUNT : 0
+rocksdb.blobdb.num.multiget COUNT : 0
+rocksdb.blobdb.num.seek COUNT : 0
+rocksdb.blobdb.num.next COUNT : 0
+rocksdb.blobdb.num.prev COUNT : 0
+rocksdb.blobdb.num.keys.written COUNT : 0
+rocksdb.blobdb.num.keys.read COUNT : 0
+rocksdb.blobdb.bytes.written COUNT : 0
+rocksdb.blobdb.bytes.read COUNT : 0
+rocksdb.blobdb.write.inlined COUNT : 0
+rocksdb.blobdb.write.inlined.ttl COUNT : 0
+rocksdb.blobdb.write.blob COUNT : 0
+rocksdb.blobdb.write.blob.ttl COUNT : 0
+rocksdb.blobdb.blob.file.bytes.written COUNT : 0
+rocksdb.blobdb.blob.file.bytes.read COUNT : 0
+rocksdb.blobdb.blob.file.synced COUNT : 0
+rocksdb.blobdb.blob.index.expired.count COUNT : 0
+rocksdb.blobdb.blob.index.expired.size COUNT : 0
+rocksdb.blobdb.blob.index.evicted.count COUNT : 0
+rocksdb.blobdb.blob.index.evicted.size COUNT : 0
+rocksdb.blobdb.gc.num.files COUNT : 0
+rocksdb.blobdb.gc.num.new.files COUNT : 0
+rocksdb.blobdb.gc.failures COUNT : 0
+rocksdb.blobdb.gc.num.keys.relocated COUNT : 0
+rocksdb.blobdb.gc.bytes.relocated COUNT : 0
+rocksdb.blobdb.fifo.num.files.evicted COUNT : 0
+rocksdb.blobdb.fifo.num.keys.evicted COUNT : 0
+rocksdb.blobdb.fifo.bytes.evicted COUNT : 0
+rocksdb.blobdb.cache.miss COUNT : 0
+rocksdb.blobdb.cache.hit COUNT : 0
+rocksdb.blobdb.cache.add COUNT : 0
+rocksdb.blobdb.cache.add.failures COUNT : 0
+rocksdb.blobdb.cache.bytes.read COUNT : 0
+rocksdb.blobdb.cache.bytes.write COUNT : 0
+rocksdb.txn.overhead.mutex.prepare COUNT : 0
+rocksdb.txn.overhead.mutex.old.commit.map COUNT : 0
+rocksdb.txn.overhead.duplicate.key COUNT : 0
+rocksdb.txn.overhead.mutex.snapshot COUNT : 0
+rocksdb.txn.get.tryagain COUNT : 0
+rocksdb.files.marked.trash COUNT : 0
+rocksdb.files.marked.trash.deleted COUNT : 0
+rocksdb.files.deleted.immediately COUNT : 166
+rocksdb.error.handler.bg.error.count COUNT : 0
+rocksdb.error.handler.bg.io.error.count COUNT : 0
+rocksdb.error.handler.bg.retryable.io.error.count COUNT : 0
+rocksdb.error.handler.autoresume.count COUNT : 0
+rocksdb.error.handler.autoresume.retry.total.count COUNT : 0
+rocksdb.error.handler.autoresume.success.count COUNT : 0
+rocksdb.memtable.payload.bytes.at.flush COUNT : 8142665000
+rocksdb.memtable.garbage.bytes.at.flush COUNT : 32655120
+rocksdb.verify_checksum.read.bytes COUNT : 0
+rocksdb.backup.read.bytes COUNT : 0
+rocksdb.backup.write.bytes COUNT : 0
+rocksdb.remote.compact.read.bytes COUNT : 0
+rocksdb.remote.compact.write.bytes COUNT : 0
+rocksdb.hot.file.read.bytes COUNT : 0
+rocksdb.warm.file.read.bytes COUNT : 0
+rocksdb.cold.file.read.bytes COUNT : 0
+rocksdb.hot.file.read.count COUNT : 0
+rocksdb.warm.file.read.count COUNT : 0
+rocksdb.cold.file.read.count COUNT : 0
+rocksdb.last.level.read.bytes COUNT : 0
+rocksdb.last.level.read.count COUNT : 0
+rocksdb.non.last.level.read.bytes COUNT : 6388457658
+rocksdb.non.last.level.read.count COUNT : 5085845
+rocksdb.last.level.seek.filtered COUNT : 0
+rocksdb.last.level.seek.filter.match COUNT : 0
+rocksdb.last.level.seek.data COUNT : 0
+rocksdb.last.level.seek.data.useful.no.filter COUNT : 0
+rocksdb.last.level.seek.data.useful.filter.match COUNT : 0
+rocksdb.non.last.level.seek.filtered COUNT : 0
+rocksdb.non.last.level.seek.filter.match COUNT : 0
+rocksdb.non.last.level.seek.data COUNT : 0
+rocksdb.non.last.level.seek.data.useful.no.filter COUNT : 0
+rocksdb.non.last.level.seek.data.useful.filter.match COUNT : 0
+rocksdb.block.checksum.compute.count COUNT : 5085453
+rocksdb.block.checksum.mismatch.count COUNT : 0
+rocksdb.multiget.coroutine.count COUNT : 0
+rocksdb.read.async.micros COUNT : 0
+rocksdb.async.read.error.count COUNT : 0
+rocksdb.table.open.prefetch.tail.miss COUNT : 0
+rocksdb.table.open.prefetch.tail.hit COUNT : 0
+rocksdb.timestamp.filter.table.checked COUNT : 0
+rocksdb.timestamp.filter.table.filtered COUNT : 0
+rocksdb.readahead.trimmed COUNT : 0
+rocksdb.fifo.max.size.compactions COUNT : 0
+rocksdb.fifo.ttl.compactions COUNT : 0
+rocksdb.prefetch.bytes COUNT : 0
+rocksdb.prefetch.bytes.useful COUNT : 0
+rocksdb.prefetch.hits COUNT : 0
+rocksdb.footer.corruption.count COUNT : 0
+rocksdb.file.read.corruption.retry.count COUNT : 0
+rocksdb.file.read.corruption.retry.success.count COUNT : 0
+rocksdb.num.user.compactions.triggered COUNT : 8
+rocksdb.db.get.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.db.write.micros P50 : 2.660241 P95 : 1918.738710 P99 : 3604.539364 P100 : 1186649.000000 COUNT : 2000000 SUM : 359970850
+rocksdb.compaction.times.micros P50 : 39400000.000000 P95 : 55632807.000000 P99 : 55632807.000000 P100 : 55632807.000000 COUNT : 8 SUM : 308495347
+rocksdb.compaction.times.cpu_micros P50 : 37000000.000000 P95 : 49153522.000000 P99 : 49153522.000000 P100 : 49153522.000000 COUNT : 8 SUM : 273741172
+rocksdb.subcompaction.setup.times.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.table.sync.micros P50 : 132000.000000 P95 : 222333.333333 P99 : 350100.000000 P100 : 501909.000000 COUNT : 123 SUM : 16779474
+rocksdb.compaction.outfile.sync.micros P50 : 435689.655172 P95 : 1058382.000000 P99 : 1058382.000000 P100 : 1058382.000000 COUNT : 73 SUM : 35855905
+rocksdb.wal.file.sync.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.manifest.file.sync.micros P50 : 5902.970297 P95 : 12223.333333 P99 : 65500.000000 P100 : 201507.000000 COUNT : 138 SUM : 1182682
+rocksdb.table.open.io.micros P50 : 3281.818182 P95 : 8976.000000 P99 : 13344.000000 P100 : 15940.000000 COUNT : 196 SUM : 698478
+rocksdb.db.multiget.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.read.block.compaction.micros P50 : 12.633771 P95 : 16.613895 P99 : 21.443602 P100 : 57776.000000 COUNT : 5085061 SUM : 62554051
+rocksdb.read.block.get.micros P50 : 3181.250000 P95 : 8760.000000 P99 : 13212.800000 P100 : 15708.000000 COUNT : 196 SUM : 672201
+rocksdb.write.raw.block.micros P50 : 0.543561 P95 : 1.429524 P99 : 1.999560 P100 : 17022.000000 COUNT : 6614419 SUM : 8608811
+rocksdb.numfiles.in.singlecompaction P50 : 17.625000 P95 : 25.000000 P99 : 25.000000 P100 : 25.000000 COUNT : 11 SUM : 177
+rocksdb.db.seek.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.db.write.stall P50 : 2647.962053 P95 : 4192.194446 P99 : 4364.351802 P100 : 1186510.000000 COUNT : 107145 SUM : 350779576
+rocksdb.sst.read.micros P50 : 1.319328 P95 : 2.387142 P99 : 3.323323 P100 : 57735.000000 COUNT : 5085845 SUM : 9787954
+rocksdb.file.read.flush.micros P50 : 8.185567 P95 : 65.200000 P99 : 75.040000 P100 : 78.000000 COUNT : 492 SUM : 8308
+rocksdb.file.read.compaction.micros P50 : 1.319276 P95 : 2.386052 P99 : 3.314411 P100 : 57735.000000 COUNT : 5085353 SUM : 9779646
+rocksdb.file.read.db.open.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.file.read.get.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.file.read.multiget.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.file.read.db.iterator.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.file.read.verify.db.checksum.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.file.read.verify.file.checksums.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.sst.write.micros P50 : 0.501105 P95 : 0.952099 P99 : 0.992187 P100 : 17016.000000 COUNT : 13229036 SUM : 6515405
+rocksdb.file.write.flush.micros P50 : 0.501151 P95 : 0.952187 P99 : 0.992280 P100 : 17016.000000 COUNT : 3939071 SUM : 1886294
+rocksdb.file.write.compaction.micros P50 : 0.501085 P95 : 0.952061 P99 : 0.992148 P100 : 5849.000000 COUNT : 9289965 SUM : 4629111
+rocksdb.file.write.db.open.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.num.subcompactions.scheduled P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.bytes.per.read P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.bytes.per.write P50 : 4128.000000 P95 : 4128.000000 P99 : 4128.000000 P100 : 4128.000000 COUNT : 2000000 SUM : 8256000000
+rocksdb.bytes.per.multiget P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.compression.times.nanos P50 : 41916.552433 P95 : 49941.449622 P99 : 71670.037621 P100 : 53523993.000000 COUNT : 6614029 SUM : 263759664832
+rocksdb.decompression.times.nanos P50 : 8377.050035 P95 : 11507.544577 P99 : 17787.788522 P100 : 15230401.000000 COUNT : 5085257 SUM : 47779441419
+rocksdb.read.num.merge_operands P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.blobdb.key.size P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.blobdb.value.size P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.blobdb.write.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.blobdb.get.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.blobdb.multiget.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.blobdb.seek.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.blobdb.next.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.blobdb.prev.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.blobdb.blob.file.write.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.blobdb.blob.file.read.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.blobdb.blob.file.sync.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.blobdb.compression.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.blobdb.decompression.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.db.flush.micros P50 : 750501.000000 P95 : 1100428.571429 P99 : 1180085.714286 P100 : 1180279.000000 COUNT : 123 SUM : 102447743
+rocksdb.sst.batch.size P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.multiget.io.batch.size P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.num.index.and.filter.blocks.read.per.level P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.num.sst.read.per.level P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.num.level.read.per.multiget P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.error.handler.autoresume.retry.count P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.async.read.bytes P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.poll.wait.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.compaction.prefetch.bytes P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.prefetched.bytes.discarded P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.async.prefetch.abort.micros P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+rocksdb.table.open.prefetch.tail.read.bytes P50 : 0.000000 P95 : 0.000000 P99 : 0.000000 P100 : 0.000000 COUNT : 0 SUM : 0
+
+
+[CompressionAwareCompaction Stats]
+  Skipped Compactions (L0)       : 111
+  Skipped Compactions (non-L0)   : 77
+  Triggered Compactions          : 11
+  Skip Efficiency       : 94.47%
+
+Dynamic compression ratio (RocksDB est.): 30.448956 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 12 files, logical size 241545908 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 494173181, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 494173181 logical bytes, effective max 881591650 bytes, dynamic ratio=30.45
+Dynamic compression ratio (RocksDB est.): 30.448956 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 12 files, logical size 241545908 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 494173181, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 494173181 logical bytes, effective max 881591650 bytes, dynamic ratio=30.45
+Dynamic compression ratio (RocksDB est.): 30.449244 
+[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked 
+[PLSWORK] Skipping L0 compaction: 13 files, logical size 251025742 bytes
+[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked 
+[FUCK] For level 1: level_logical_bytes = 494173181, base_max_bytes = 268435456 
+[FUCK] Skipping compaction at Level 1: 494173181 logical bytes, effective max 881583308 bytes, dynamic ratio=30.45
+

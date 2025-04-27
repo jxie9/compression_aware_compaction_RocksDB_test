@@ -1,0 +1,112 @@
+-------------------------------------------
+===========================================
+===========================================
+===========================================
+===========================================
+===========================================
+
+Seed: 1745714556555094
+
+[BASELINE] [INDICATE THE USE OF COMPRESSION DECREASES COMPACTION NUMBERS] {Compare X1 and X2}
+///// DONE /////
+X1: sudo ./db_bench --db=/home/jaxie/dir_rocksdb/test.db --benchmarks=fillrandom,stats --num=2000000 --key_size=16 --value_size=4096 --compression_type=zlib --stats_level=5 --stats_per_interval=1 --statistics=1 --disable_wal=true --compression_ratio=0.5 --seed=1745714556555094 --perf_level=3 2>&1
+
+- With default compaction trigger
+- With Zlib compression
+- 2GB
+- 4 kb value sized
+- Automatic compaction
+
+///// DONE /////
+X2: sudo ./db_bench --db=/home/jaxie/dir_rocksdb/test.db --benchmarks=fillrandom,stats --num=2000000 --key_size=16 --value_size=4096 --compression_type=none --stats_level=5 --stats_per_interval=1 --statistics=1 --disable_wal=true --compression_ratio=1 --seed=1745714556555094 --perf_level=3 2>&1
+
+- With default compaction trigger
+- With no compression (type=none and compression_ratio=1)
+- 2GB
+- 4 kb value sized
+- Automatic compaction
+
+[DEMONSTRATE IMPACT OF COMPRESSION AWARE COMPACTION TRIGGER (WITH HARDCODED RATIOS)] {Compare F1 with F2}
+///// DONE ///// 
+F1: sudo ./db_bench --db=/home/jaxie/dir_rocksdb/test.db --benchmarks=fillrandom,stats --num=2000000 --key_size=16 --value_size=4096 --compression_type=zlib --stats_level=5 --stats_per_interval=1 --statistics=1 --disable_wal=true --compression_ratio=0.5 --seed=1745714556555094 --perf_level=3 2>&1
+
+- With compression aware compaction trigger (Ratios at 50%)
+- With Zlib compression
+- 2 GB
+- 4 kb value sized
+- Automatic compaction
+
+///// DONE /////
+F2: sudo ./db_bench --db=/home/jaxie/dir_rocksdb/test.db --benchmarks=fillrandom,stats --num=2000000 --key_size=16 --value_size=4096 --compression_type=none --stats_level=5 --stats_per_interval=1 --statistics=1 --disable_wal=true --compression_ratio=1 --seed=1745714556555094 --perf_level=3 2>&1
+
+- With compression aware comapction trigger (Ratios at 100%)
+- With no compression (type=none and compression_ratio=1)
+- 2 GB
+- 4 kb value size
+- Automatic compaction
+
+[DEMONSTRATE DYNAMIC RATIO PERFORMS THE SAME] {Compare G1 and F1}
+///// DONE /////
+G1: sudo ./db_bench --db=/home/jaxie/dir_rocksdb/test.db --benchmarks=fillrandom,stats --num=2000000 --key_size=16 --value_size=4096 --compression_type=zlib --stats_level=5 --stats_per_interval=1 --statistics=1 --disable_wal=true --compression_ratio=0.5 --seed=1745714556555094 --perf_level=3 2>&1
+
+- With compression aware compaction trigger + dynamic ratio
+- With Zlib compression
+- 2 GB
+- 4 kb value size
+- Automatic compaction
+
+[DEMONSTRATE IMPACT ON CSD: BASELINE COMPARISON] {Compare scaleflux_B1 and scaleflux_B2}
+///// RUNNING /////
+scaleflux_B1: sudo ./db_bench --db=/home/park2/rocksdb_test/test.db --benchmarks=fillrandom,stats --num=2000000 --key_size=16 --value_size=4096 --compression_type=none --stats_level=5 --stats_per_interval=0 --statistics=1 --compression_ratio=1 --seed=1745714556555094 --perf_level=3 2>&1
+
+- With default compaction trigger
+- With no compression (To make use of transparent compression) (type=none and compression_ratio=1)
+- 2 GB
+- 4 kb value size
+
+///// PENDING /////
+scaleflux_B2: sudo ./db_bench --db=/home/park2/rocksdb_test/test.db --benchmarks=fillrandom,stats --num=2000000 --key_size=16 --value_size=4096 --compression_type=none --stats_level=5 --stats_per_interval=0 --statistics=1 --compression_ratio=1 --seed=1745714556555094 --perf_level=3 2>&1
+
+- With compression aware compaction trigger **MUST WRITE nvme tool HOOKS
+- No compression (To make use of transparent compression) (type=none and compression_ratio=1)
+- 2 GB
+- 4 kb value size
+
+[DEMONSTRATE IMPACT ON CSD: WHY DYNAMIC RATIO IS ESSENTIAL] {Compare scaleflux_B2 and scaleflux_B3} then {Compare scaleflux_B1 and scaleflux_B3}
+///// DONE /////
+scaleflux_B3: sudo ./db_bench --db=/home/park2/rocksdb_test/test.db --benchmarks=fillrandom,stats --num=2000000 --key_size=16 --value_size=4096 --compression_type=none --stats_level=5 --stats_per_interval=0 --statistics=1 --compression_ratio=1 --seed=1745714556555094 --perf_level=3 2>&1
+
+- With compression aware compaction trigger + dynamic ratio **MUST WRITE nvme tool HOOKS
+- No compression (To make use of transparent compression)
+- 2 GB
+- 4 kb value size
+
+*************************************************
+
+Hypothesis:
+- When compaction triggers, overheads (ie CPU and time) are incurred due to compression and merge
+	- Compaction is originally used to decrease file overlap
+	- Decrease write, read, and space amplification
+- Compaction in RocksDB is not aware of compression
+	- Currently, it only looks at the number of files per level and doesn't consider file size
+	- Compaction could occur too early, increasing number of compactions
+	- There is unnecessary CPU utilization, program time, and write amplification (As number of compactions increase)
+- The compaction trigger can be changed to consider compression
+	- Reduces the unnecesarry overheads mentioned
+- Incorperating transparent compression
+	- CSD can be used to further reduce overhead
+	- Overall improved throughput 
+	- (See scaleflux tbs) Demonstrates hardware integration
+
+	
+Analysis:
+	- TODO
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

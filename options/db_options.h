@@ -147,6 +147,13 @@ struct MutableDBOptions {
   size_t compaction_readahead_size;
   int max_background_flushes;
   std::string daily_offpeak_time_utc;
+  //\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\////\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//
+  // Custom flags for configuring compression-aware compaction trigger  
+  bool custom_trigger = false;
+  int ratio_source = 0;
+  // Pass existing flag options for internal access
+  double static_compression_ratio = 1.0;
+  //\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\////\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//
 };
 
 Status GetStringFromMutableDBOptions(const ConfigOptions& config_options,
