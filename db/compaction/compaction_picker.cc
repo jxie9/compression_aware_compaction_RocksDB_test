@@ -1257,4 +1257,30 @@ bool CompactionPicker::GetOverlappingL0Files(
   return true;
 }
 
+bool CompressionAwareCompaction(
+  int num_files_at_level,     //
+  size_t level_logical_size,  //
+  size_t base_size_threshold, //
+  double compression_ratio,   //
+  int max_files_allowed       //
+) {
+
+if (compression_ratio <= 0) {
+  compression_ratio = 1.0; // safety fallback 
+}
+
+// 100/R * N (R = compression ratio, N = number of files)
+size_t adjusted_size_threshold = static_cast<size_t>((100.0 / compression_ratio) * base_size_threshold);
+
+// Trigger if number of files exceeded (Prevent L0 explosion)
+bool too_many_files = num_files_at_level > max_files_allowed;
+too_many_files = 0;
+
+// Trigger if size based on compression ratio is met
+bool size_exceeded = level_logical_size > adjusted_size_threshold;
+
+return too_many_files || size_exceeded;
+}
+
+
 }  // namespace ROCKSDB_NAMESPACE

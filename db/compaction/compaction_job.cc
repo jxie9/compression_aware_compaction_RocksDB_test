@@ -667,6 +667,11 @@ void CompactionJob::GenSubcompactionBoundaries() {
 }
 
 Status CompactionJob::Run() {
+
+  if (stats_ != nullptr) {
+    stats_->recordTick(NUM_USER_COMPACTIONS_TRIGGERED, 1);
+  }
+  
   AutoThreadOperationStageUpdater stage_updater(
       ThreadStatus::STAGE_COMPACTION_RUN);
   TEST_SYNC_POINT("CompactionJob::Run():Start");

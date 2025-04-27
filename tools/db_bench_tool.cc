@@ -3928,6 +3928,24 @@ class Benchmark {
 
     if (FLAGS_statistics) {
       fprintf(stdout, "STATISTICS:\n%s\n", dbstats->ToString().c_str());
+
+      // Statistics for comrpession-aware compaction
+      extern int compression_aware_skipped_compactions;
+      extern int original_triggered_compactions;
+      extern int compression_aware_skipped_compactions_L0;
+
+      fprintf(stdout, "\n[CompressionAwareCompaction Stats]\n");
+      fprintf(stdout, "  Skipped Compactions (L0)       : %d\n", compression_aware_skipped_compactions_L0);
+      fprintf(stdout, "  Skipped Compactions (non-L0)   : %d\n", compression_aware_skipped_compactions);
+      fprintf(stdout, "  Triggered Compactions          : %d\n", original_triggered_compactions);
+      if ((compression_aware_skipped_compactions_L0 + compression_aware_skipped_compactions + original_triggered_compactions) > 0) {
+        double skip_rate = 100.0 * (compression_aware_skipped_compactions + compression_aware_skipped_compactions_L0) /
+                            (compression_aware_skipped_compactions_L0 + compression_aware_skipped_compactions + original_triggered_compactions);
+        fprintf(stdout, "  Skip Efficiency       : %.2f%%\n", skip_rate);
+      }
+      fprintf(stdout, "\n");
+      // End statistics for comrpession-aware compaction
+
     }
     if (FLAGS_simcache_size >= 0) {
       fprintf(
