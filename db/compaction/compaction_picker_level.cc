@@ -240,7 +240,9 @@ double EstimateCompressionRatio(const VersionStorageInfo* vstorage) {
   if (total_compressed_size == 0) {
       return 1.0; // No compression (or empty database)
   }
-  return  (total_compressed_size / static_cast<double>(total_raw_size)) * 100; // Returns percentage
+
+  // Returns ratio as (compressed / uncompressed) out of 100%
+  return  (total_compressed_size / static_cast<double>(total_raw_size)) * 100; 
 }
 
 //* Retreives ScaleFlux compression ratio from sfx-cap-info *//
@@ -255,12 +257,9 @@ double GetCSDCompressionRatioFromSfx() {
 
     // Look for the line containing "Compression Ratio"
     // ex. sfx-cap-info output:
-    // SFX card: /dev/nvme0n1
-    // Formatted Capacity:                11520 GB                           
-    // Provisioned Capacity:              3840 GB                            
-    // Compression Ratio:                 393%                               
-    // Physical Used Ratio:               1%                                 
-    // Free Physical Space:               3773 GB 
+    // ...                                                       
+    // Compression Ratio:                 393%
+    // ..
     if (str_line.find("Compression Ratio") != std::string::npos) {
       std::istringstream iss(str_line);
       std::string token;
@@ -287,7 +286,9 @@ double GetCSDCompressionRatioFromSfx() {
   }
 
   pclose(fp);
-  return compression_ratio; // Returns percentage
+
+  // Returns ratio as (compressed / uncompressed) out of 100% 
+  return compression_ratio / 10; 
 }
 //* End of custom ratio estimation functions *//
 
@@ -321,12 +322,15 @@ void LevelCompactionBuilder::SetupInitialFiles() {
         const int base_file_trigger = mutable_cf_options_.level0_file_num_compaction_trigger; // default L0 trigger // 4
         // fprintf(stdout, "test: base_file_trigger: %d \n", base_file_trigger);
 
-        // Get ratio
-        // const double static_compression_ratio = 50; // In percentage, relative to --compression_ratio flag on db_bench
+        // Get ratio //
+        // In percentage, relative to --compression_ratio flag on db_bench 
+        // Expecting a ratio as (compressed / uncompressed) out of 100% 
+        // const double static_compression_ratio = 50; 
         
+        // From paper:
         // (100 / R) * N ::: Expects Ratio (R) as a percentage ::: Expects Num files (N) as an int
-        // const int effective_file_trigger = static_cast<int>((100.0 / static_compression_ratio) * base_file_trigger);
-        const int effective_file_trigger = static_cast<int>((100.0 / dynamic_compression_ratio) * base_file_trigger);
+        // const int effective_file_trigger = static_cast<int>((100.0 / static_compression_ratio) * base_file_trigger);    // Static ratio
+        const int effective_file_trigger = static_cast<int>((100.0 / dynamic_compression_ratio) * base_file_trigger);   // Dynamic ratio 
         fprintf(stdout, "[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked \n");
 
         if (l0_num_files <= effective_file_trigger) {
