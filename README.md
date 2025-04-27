@@ -15,8 +15,6 @@ sudo ./db_bench --db=/home/path/to/test.db --benchmarks=fillrandom,stats --num=2
 
 Below is a copy of the README.md from the original RocksDB github
 
-
-
 ## RocksDB: A Persistent Key-Value Store for Flash and RAM Storage
 
 [![CircleCI Status](https://circleci.com/gh/facebook/rocksdb.svg?style=svg)](https://circleci.com/gh/facebook/rocksdb)
