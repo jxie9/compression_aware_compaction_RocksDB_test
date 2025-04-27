@@ -56,7 +56,7 @@ G1: sudo ./db_bench --db=/home/jaxie/dir_rocksdb/test.db --benchmarks=fillrandom
 - Automatic compaction
 
 [DEMONSTRATE IMPACT ON CSD: BASELINE COMPARISON] {Compare scaleflux_B1 and scaleflux_B2}
-///// RUNNING /////
+///// DONE /////
 scaleflux_B1: sudo ./db_bench --db=/home/park2/rocksdb_test/test.db --benchmarks=fillrandom,stats --num=2000000 --key_size=16 --value_size=4096 --compression_type=none --stats_level=5 --stats_per_interval=0 --statistics=1 --compression_ratio=1 --seed=1745714556555094 --perf_level=3 2>&1
 
 - With default compaction trigger
@@ -64,7 +64,7 @@ scaleflux_B1: sudo ./db_bench --db=/home/park2/rocksdb_test/test.db --benchmarks
 - 2 GB
 - 4 kb value size
 
-///// PENDING /////
+///// PENDING ///// /******* MIGHT NOT DO *******\ 
 scaleflux_B2: sudo ./db_bench --db=/home/park2/rocksdb_test/test.db --benchmarks=fillrandom,stats --num=2000000 --key_size=16 --value_size=4096 --compression_type=none --stats_level=5 --stats_per_interval=0 --statistics=1 --compression_ratio=1 --seed=1745714556555094 --perf_level=3 2>&1
 
 - With compression aware compaction trigger **MUST WRITE nvme tool HOOKS
