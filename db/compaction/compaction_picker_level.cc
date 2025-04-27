@@ -285,7 +285,6 @@ double GetCSDCompressionRatioFromSfx() {
   pclose(fp);
   return compression_ratio;
 }
-
 //* End of custom ratio estimation functions *//
 
 void LevelCompactionBuilder::SetupInitialFiles() {
@@ -294,8 +293,14 @@ void LevelCompactionBuilder::SetupInitialFiles() {
 
   // Init estimate for compression ratio
   // double dynamic_compression_ratio = ComputeGlobalCompressionRatio(cfd);
-  // double dynamic_compression_ratio = EstimateCompressionRatio(vstorage_);
-  double dynamic_compression_ratio = GetCSDCompressionRatioFromSfx();
+  int ratio_source = 1;
+  double dynamic_compression_ratio = 0.0;
+  if (ratio_source) {
+    dynamic_compression_ratio = EstimateCompressionRatio(vstorage_);
+  } else {
+    dynamic_compression_ratio = GetCSDCompressionRatioFromSfx();
+  }
+
   fprintf(stdout, "dynamic compression ratio: %f \n", dynamic_compression_ratio);
 
   //* What we're interested in, I think *//
