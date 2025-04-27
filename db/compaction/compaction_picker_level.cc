@@ -298,15 +298,15 @@ void LevelCompactionBuilder::SetupInitialFiles() {
 
   // Init estimate for compression ratio
   // double dynamic_compression_ratio = ComputeGlobalCompressionRatio(cfd);
-  int ratio_source = 1;
-  double dynamic_compression_ratio = 1.0;
-  if (ratio_source) {
-    dynamic_compression_ratio = EstimateCompressionRatio(vstorage_);
-  } else {
-    dynamic_compression_ratio = GetCSDCompressionRatioFromSfx();
-  }
+  // int ratio_source = 1;
+  // double dynamic_compression_ratio = 1.0;
+  // if (ratio_source) {
+  //   dynamic_compression_ratio = EstimateCompressionRatio(vstorage_);
+  // } else {
+  //   dynamic_compression_ratio = GetCSDCompressionRatioFromSfx();
+  // }
 
-  fprintf(stdout, "dynamic compression ratio: %f \n", dynamic_compression_ratio);
+  // fprintf(stdout, "dynamic compression ratio: %f \n", dynamic_compression_ratio);
 
   //* What we're interested in, I think *//
   for (int i = 0; i < compaction_picker_->NumberLevels() - 1; i++) {
@@ -315,51 +315,50 @@ void LevelCompactionBuilder::SetupInitialFiles() {
     assert(i == 0 || start_level_score_ <= vstorage_->CompactionScore(i - 1));
     if (start_level_score_ >= 1) {
        // Start of compression-aware mechanism
-      if (start_level_ == 0) { // Apply to L0
-        const int l0_num_files = vstorage_->NumLevelFiles(0);
-        const uint64_t l0_logical_size = vstorage_->NumLevelBytes(0);
+      // if (start_level_ == 0) { // Apply to L0
+      //   const int l0_num_files = vstorage_->NumLevelFiles(0);
+      //   const uint64_t l0_logical_size = vstorage_->NumLevelBytes(0);
       
-        const int base_file_trigger = mutable_cf_options_.level0_file_num_compaction_trigger; // default L0 trigger // 4
-        // fprintf(stdout, "test: base_file_trigger: %d \n", base_file_trigger);
+      //   const int base_file_trigger = mutable_cf_options_.level0_file_num_compaction_trigger; // default L0 trigger // 4
+      //   // fprintf(stdout, "test: base_file_trigger: %d \n", base_file_trigger);
 
-        // Get ratio //
-        // In percentage, relative to --compression_ratio flag on db_bench 
-        // Expecting a ratio as (compressed / uncompressed) out of 100% 
-        // const double static_compression_ratio = 50; 
+      //   // Get ratio //
+      //   // In percentage, relative to --compression_ratio flag on db_bench 
+      //   // Expecting a ratio as (compressed / uncompressed) out of 100% 
+      //   // const double static_compression_ratio = 50; z
         
-        // From paper:
-        // (100 / R) * N ::: Expects Ratio (R) as a percentage ::: Expects Num files (N) as an int
-        // const int effective_file_trigger = static_cast<int>((100.0 / static_compression_ratio) * base_file_trigger);    // Static ratio
-        const int effective_file_trigger = static_cast<int>((100.0 / dynamic_compression_ratio) * base_file_trigger);   // Dynamic ratio 
-        fprintf(stdout, "[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked \n");
+      //   // From paper:
+      //   // (100 / R) * N ::: Expects Ratio (R) as a percentage ::: Expects Num files (N) as an int
+      //   // const int effective_file_trigger = static_cast<int>((100.0 / static_compression_ratio) * base_file_trigger);    // Static ratio
+      //   const int effective_file_trigger = static_cast<int>((100.0 / dynamic_compression_ratio) * base_file_trigger);   // Dynamic ratio 
+      //   fprintf(stdout, "[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked \n");
 
-        if (l0_num_files <= effective_file_trigger) {
-          compression_aware_skipped_compactions_L0++;
-          LogToBuffer(log_buffer_, "[PLSWORK] Skipping L0 compaction: %d files, logical size %llu bytes\n",
-                         l0_num_files, static_cast<unsigned long long>(l0_logical_size));
-          fprintf(stdout, "[PLSWORK] Skipping L0 compaction: %d files, logical size %llu bytes\n",
-                          l0_num_files, static_cast<unsigned long long>(l0_logical_size));
-          continue; // Skip to next level (skip PickFileToCompact() call)
-        }
-      } else { // Apply to all other levels
-        uint64_t level_logical_bytes = vstorage_->NumLevelBytes(start_level_);
-        uint64_t base_max_bytes = vstorage_->MaxBytesForLevel(start_level_);
-        fprintf(stdout, "[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked \n");
-        fprintf(stdout, "[FUCK] For level %d: level_logical_bytes = %lu, base_max_bytes = %lu \n", start_level_, level_logical_bytes, base_max_bytes);
+      //   if (l0_num_files <= effective_file_trigger) {
+      //     compression_aware_skipped_compactions_L0++;
+      //     LogToBuffer(log_buffer_, "[PLSWORK] Skipping L0 compaction: %d files, logical size %llu bytes\n",
+      //                    l0_num_files, static_cast<unsigned long long>(l0_logical_size));
+      //     fprintf(stdout, "[PLSWORK] Skipping L0 compaction: %d files, logical size %llu bytes\n",
+      //                     l0_num_files, static_cast<unsigned long long>(l0_logical_size));
+      //     continue; // Skip to next level (skip PickFileToCompact() call)
+      //   }
+      // } else { // Apply to all other levels
+      //   uint64_t level_logical_bytes = vstorage_->NumLevelBytes(start_level_);
+      //   uint64_t base_max_bytes = vstorage_->MaxBytesForLevel(start_level_);
+      //   fprintf(stdout, "[FUCK] SANITY CHECK 3: LN compression-aware mechanism checked \n");
+      //   fprintf(stdout, "[FUCK] For level %d: level_logical_bytes = %lu, base_max_bytes = %lu \n", start_level_, level_logical_bytes, base_max_bytes);
 
-        // Consider max bytes instead of number of files (Ref L1+ behaviour)
-        // uint64_t effective_max_bytes = static_cast<uint64_t>((100.0 / static_compression_ratio) * base_max_bytes);
-        uint64_t effective_max_bytes_trigger = static_cast<uint64_t>((100.0 / dynamic_compression_ratio) * base_max_bytes);
+      //   // Consider max bytes instead of number of files (Ref L1+ behaviour)
+      //   // uint64_t effective_max_bytes = static_cast<uint64_t>((100.0 / static_compression_ratio) * base_max_bytes);
+      //   uint64_t effective_max_bytes_trigger = static_cast<uint64_t>((100.0 / dynamic_compression_ratio) * base_max_bytes);
 
-        if (level_logical_bytes <= effective_max_bytes_trigger) {
-          compression_aware_skipped_compactions++;
-          fprintf(stderr, "[FUCK] Skipping compaction at Level %d: %lu logical bytes, effective max %lu bytes, dynamic ratio=%.2f\n", 
-                          start_level_, level_logical_bytes, effective_max_bytes_trigger, dynamic_compression_ratio);
-          continue; // Skip to next level (skip PickFileToCompact() call)
-        }
-      }
+      //   if (level_logical_bytes <= effective_max_bytes_trigger) {
+      //     compression_aware_skipped_compactions++;
+      //     fprintf(stderr, "[FUCK] Skipping compaction at Level %d: %lu logical bytes, effective max %lu bytes, dynamic ratio=%.2f\n", 
+      //                     start_level_, level_logical_bytes, effective_max_bytes_trigger, dynamic_compression_ratio);
+      //     continue; // Skip to next level (skip PickFileToCompact() call)
+      //   }
+      // }
       // End of compression-aware mechanism
-//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\////\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//
 
       if (skipped_l0_to_base && start_level_ == vstorage_->base_level()) {
         // If L0->base_level compaction is pending, don't schedule further
@@ -411,6 +410,7 @@ void LevelCompactionBuilder::SetupInitialFiles() {
     }
   }
   //* End of what I think we're interested in *//
+//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\////\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//
 
 
   if (!start_level_inputs_.empty()) {
