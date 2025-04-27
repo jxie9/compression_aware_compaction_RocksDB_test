@@ -224,6 +224,7 @@ void LevelCompactionBuilder::PickFileToCompact(
   start_level_inputs_.files.clear();
 }
 
+//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\////\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//
 //* Estimates compression ratio via internal RocksDB options *//
 double EstimateCompressionRatio(const VersionStorageInfo* vstorage) {
   uint64_t total_raw_size = 0;
@@ -245,10 +246,6 @@ double EstimateCompressionRatio(const VersionStorageInfo* vstorage) {
 //* Retreives ScaleFlux compression ratio from sfx-cap-info *//
 double GetCSDCompressionRatioFromSfx() {
   FILE* fp = popen("sfx-cap-info", "r");
-  if (fp == nullptr) {
-    fprintf(stderr, "[ERROR] Failed to run sfx-cap-info\n");
-    return 1.0; // Assume no compression if we can't get it
-  }
 
   char line[512];
   double compression_ratio = 1.0; // Default if not found
@@ -257,6 +254,13 @@ double GetCSDCompressionRatioFromSfx() {
     std::string str_line(line);
 
     // Look for the line containing "Compression Ratio"
+    // ex. sfx-cap-info output:
+    // SFX card: /dev/nvme0n1
+    // Formatted Capacity:                11520 GB                           
+    // Provisioned Capacity:              3840 GB                            
+    // Compression Ratio:                 393%                               
+    // Physical Used Ratio:               1%                                 
+    // Free Physical Space:               3773 GB 
     if (str_line.find("Compression Ratio") != std::string::npos) {
       std::istringstream iss(str_line);
       std::string token;
@@ -271,7 +275,7 @@ double GetCSDCompressionRatioFromSfx() {
             token.pop_back();
           }
           try {
-            compression_ratio = std::stod(token) / 100.0; // Convert from % to ratio
+            compression_ratio = std::stod(token); 
           } catch (const std::exception& e) {
             fprintf(stderr, "[ERROR] Failed to parse compression value: %s\n", e.what());
             compression_ratio = 1.0;
@@ -294,7 +298,7 @@ void LevelCompactionBuilder::SetupInitialFiles() {
   // Init estimate for compression ratio
   // double dynamic_compression_ratio = ComputeGlobalCompressionRatio(cfd);
   int ratio_source = 1;
-  double dynamic_compression_ratio = 0.0;
+  double dynamic_compression_ratio = 1.0;
   if (ratio_source) {
     dynamic_compression_ratio = EstimateCompressionRatio(vstorage_);
   } else {
@@ -351,6 +355,7 @@ void LevelCompactionBuilder::SetupInitialFiles() {
         }
       }
       // End of compression-aware mechanism
+//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\////\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//
 
       if (skipped_l0_to_base && start_level_ == vstorage_->base_level()) {
         // If L0->base_level compaction is pending, don't schedule further
