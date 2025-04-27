@@ -240,7 +240,7 @@ double EstimateCompressionRatio(const VersionStorageInfo* vstorage) {
   if (total_compressed_size == 0) {
       return 1.0; // No compression (or empty database)
   }
-  return static_cast<double>(total_raw_size) / total_compressed_size;
+  return  (total_compressed_size / static_cast<double>(total_raw_size)) * 100; // Returns percentage
 }
 
 //* Retreives ScaleFlux compression ratio from sfx-cap-info *//
@@ -287,7 +287,7 @@ double GetCSDCompressionRatioFromSfx() {
   }
 
   pclose(fp);
-  return compression_ratio;
+  return compression_ratio; // Returns percentage
 }
 //* End of custom ratio estimation functions *//
 
@@ -324,7 +324,7 @@ void LevelCompactionBuilder::SetupInitialFiles() {
         // Get ratio
         // const double static_compression_ratio = 50; // In percentage, relative to --compression_ratio flag on db_bench
         
-        // (100 / R) * N
+        // (100 / R) * N ::: Expects Ratio (R) as a percentage ::: Expects Num files (N) as an int
         // const int effective_file_trigger = static_cast<int>((100.0 / static_compression_ratio) * base_file_trigger);
         const int effective_file_trigger = static_cast<int>((100.0 / dynamic_compression_ratio) * base_file_trigger);
         fprintf(stdout, "[PLSWORK] SANITY CHECK 2: L0 compression-aware mechanism checked \n");
