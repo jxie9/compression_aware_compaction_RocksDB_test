@@ -3,9 +3,9 @@ This is a fork of the original RocksDB (https://github.com/facebook/rocksdb).
 An implementation of a compression-aware compaction mechanism is implemented in this project. Originally detailed in a survey [Jarnilla et al.], the compaction mechanism in question is simply an injection of some influence of the compression ratio. In general, it can be described as compaction ratio = (100/R) * N. The method of testbenching used in this project was db_bench. A couple relative db_bench calls can found below and the in our final project report /TODO: Link report. A function to determine the compact ratio of SST files dynamically during the db_bench as well. This compaction mechansim was also designed to work with a ScaleFlux CSD 3000. To do so, we have created a simple function to determine the CSD's compression ratio by invoking and parsing sfx-cap-info. More details can be found in our final report. /TODO: Link report
 
 An example of a relavent db_bench call:
-'''
+```
 sudo ./db_bench --db=/home/path/to/test.db --benchmarks=fillrandom,stats --num=2000000 --key_size=16 --value_size=4096 --compression_type=none --stats_level=5 --stats_per_interval=1 --statistics=1 --disable_wal=true --compression_ratio=1 --seed=1745714556555094 --perf_level=3 2>&1
-'''
+```
 - Benchmarks set to fill with random keys and record statistics (We used the same seed across testbenches to ensure consistency during testing - more in our report)
 - 2 GB size with key size of 16 and a value size of 4 kb
 - No compression type (As we were using the ScaleFlux CSD, we wanted to use the transparent compression instead of invoking software compression)
